@@ -23,7 +23,8 @@ function TemperatureAndDetails({
         humidity,
         feels_like,
         timezone,
-    }
+    },
+    units,
 }) {
     return (
         <div>
@@ -33,7 +34,7 @@ function TemperatureAndDetails({
 
             <div className='flex flex-row items-center justify-between text-white py-3'>
                 <img src={iconUrlFromCode(icon)} alt="" className='w-20' />
-                <p className='text-5xl'>{`${temp.toFixed()}°`}</p>
+                <p className='text-5xl'>{`${temp.toFixed()}°${units === 'metric' ? 'C' : 'F'}`}</p>
                 <div className='flex flex-col space-y-2'>
 
                     <div className='flex font-light text-sm items-center justify-center'>

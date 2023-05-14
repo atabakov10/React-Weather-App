@@ -54,7 +54,7 @@ function App() {
       {weather && (
         <>
           <TimeAndLocation weather={weather} />
-          <TemperatureAndDetails weather={weather} />
+          <TemperatureAndDetails weather={weather} units={units}/>
 
           <Forecast title='hourly forecast' items={weather.hourly} />
           <Forecast title='daily forecast' items={weather.daily} />
